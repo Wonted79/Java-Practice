@@ -12,8 +12,8 @@ public class RectangleMain {
         Rectangle rect1 = new Rectangle(100,20);
         Rectangle rect2 = new Rectangle(100,20);
 
-        rect1.toString();
-        rect2.toString();
+        System.out.println(rect1.toString());
+        System.out.println(rect2.toString());
         System.out.println(rect1==rect2);
         System.out.println(rect1.equals(rect2));
     }
