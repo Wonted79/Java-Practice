@@ -1,4 +1,4 @@
-package 불변객체.불변객체도입;
+package 불변객체.불변객체값변경;
 
 public class MutableObj {
     private int value;
