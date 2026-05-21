@@ -13,5 +13,4 @@ public enum Grade {
         return discountPercent;
     }
 
-    //public int discount
 }
