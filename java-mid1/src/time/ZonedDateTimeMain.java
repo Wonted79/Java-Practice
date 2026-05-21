@@ -18,6 +18,9 @@ public class ZonedDateTimeMain {
         System.out.println("zdt2 = "+zdt2);
 
         ZonedDateTime utcZdt = zdt2.withZoneSameInstant(ZoneId.of("UTC"));
-        System.out.println();
+        System.out.println("utcZdt = "+utcZdt);
+        //America/Argentina/Buenos_Aires
+        ZonedDateTime americaZdt = zdt2.withZoneSameInstant(ZoneId.of("America/Argentina/Buenos_Aires"));
+        System.out.println("americaZdt = "+americaZdt);
     }
 }
