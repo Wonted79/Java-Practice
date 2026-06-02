@@ -36,8 +36,17 @@ public class MyArrayListV3 {
             grow();
         }
         shiftRightFrom(index);
-        elementData[size] = e;
+        elementData[index] = e;
         size++;
+    }
+    //삭제 기능 추가
+    public Object remove(int index){
+        Object oldValue = get(index);
+        shiftLeftFrom(index);
+
+        size--;
+        elementData[size] =null;
+        return oldValue;
     }
 
     public Object get(int index){
@@ -67,14 +76,14 @@ public class MyArrayListV3 {
     }
 
     private void shiftRightFrom(int index){
-        for (int i = size-1;i>index;i--){
+        for (int i = size;i>index;i--){
             elementData[i] = elementData[i-1];
         }
     }
 
     private void shiftLeftFrom(int index){
-        for (int i = size-1;i>index;i--){
-            elementData[i] = elementData[i-1];
+        for (int i = index;i<size-1;i++){
+            elementData[i] = elementData[i+1];
         }
     }
 
