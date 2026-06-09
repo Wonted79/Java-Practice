@@ -1,0 +1,48 @@
+package thread.start.test;
+
+import util.MyLogger;
+
+import java.awt.*;
+
+public class StartTest3Main {
+
+    public static void main(String[] args) {
+        Thread thread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                for(int i=1;i<=5;i++){
+                    MyLogger.log("value :"+i);
+                    try {
+                        Thread.sleep(1000);
+                    }
+                    catch (InterruptedException e){
+                        e.getStackTrace();
+                    }
+                }
+            }
+        });
+        thread.setName("counter");
+        thread.start();
+        /*
+        Runnable runnable = new Runnable() {
+            @Override
+            public void run() {
+                for (int i = 1; i <= 5; i++) {
+                    log("value: " + i);
+                    try {
+                        Thread.sleep(1000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        };
+        Thread thread = new Thread(runnable, "counter");
+        thread.start();
+
+         */
+    }
+
+}
+
+
